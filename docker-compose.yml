@@ -57,8 +57,7 @@ services:
   app:
     build:
       context: ./asena
-    command: python manage.py runserver 0.0.0.0:8000
-#    command: gunicorn asena.wsgi --bind 0.0.0.0:8000
+    command: gunicorn asena.wsgi --bind 0.0.0.0:8000
     container_name: app
     depends_on:
       - postgres
