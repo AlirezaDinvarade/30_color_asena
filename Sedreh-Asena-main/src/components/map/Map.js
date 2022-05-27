@@ -89,7 +89,7 @@ const Map = () => {
   }, [text]);
  
 useEffect( ()=>{
-  axios.post("http://localhost/api/get_polygons",null,{}).then(({data})=>{
+  axios.post("http://185.226.117.165/api/get_polygons",null,{}).then(({data})=>{
 
      setMultiPol(data.indicator);
   },[])
@@ -104,7 +104,7 @@ useEffect( ()=>{
     params.append('lat', popUpCor[1]);
     params.append('lon', popUpCor[0]);
   
-    axios.post(`http://localhost/api/get_point`,params,{
+    axios.post(`http://185.226.117.165/api/get_point`,params,{
 
     }).then(({data})=> {
       console.log(data);
